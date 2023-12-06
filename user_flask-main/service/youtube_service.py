@@ -25,19 +25,19 @@ class YoutubeService:
         return os.path.abspath(file_path)
 
     def transcribe(self, full_path) -> None:
-        file_path, file_name_ext = os.path.split(full_path)
-        file_name, ext = os.path.splitext(file_name_ext)
-        ext = ext[1:]
-        if ext not in ACCEPTED_AUDIO_FORMATS:
-            raise Exception(f"Invalid audio format: {ext}")
-        print(f""""{file_name}" is being transcribed...""")
-        audio = whisper.load_audio(full_path)
-        transcription = MODEL.transcribe(audio)
-        transcription_text = transcription['text']
-        print(f""""{file_name}.{ext}" was successfully transcribed!""")
-        with open(f"{file_path}/{file_name}.txt", "w", encoding='utf-8') as f:
-            f.write(transcription_text)
-        os.remove(f"{file_path}/{file_name}.{ext}")
-        # transcription_text = "allalalalalalalalala"
-        # return ("caminho/de/teste", transcription_text)
-        return (f"{file_path}/{file_name}.txt", transcription_text)
+        # file_path, file_name_ext = os.path.split(full_path)
+        # file_name, ext = os.path.splitext(file_name_ext)
+        # ext = ext[1:]
+        # if ext not in ACCEPTED_AUDIO_FORMATS:
+        #     raise Exception(f"Invalid audio format: {ext}")
+        # print(f""""{file_name}" is being transcribed...""")
+        # audio = whisper.load_audio(full_path)
+        # transcription = MODEL.transcribe(audio)
+        # transcription_text = transcription['text']
+        # print(f""""{file_name}.{ext}" was successfully transcribed!""")
+        # with open(f"{file_path}/{file_name}.txt", "w", encoding='utf-8') as f:
+        #     f.write(transcription_text)
+        # os.remove(f"{file_path}/{file_name}.{ext}")
+        transcription_text = "allalalalalalalalala"
+        return ("caminho/de/teste", transcription_text)
+        # return (f"{file_path}/{file_name}.txt", transcription_text)
