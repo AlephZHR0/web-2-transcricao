@@ -23,8 +23,12 @@ class UserRepository:
         user = User.query.get(user_id)
         if not user:
             return None
-        user.name = updated_data.get('name', user.name)
+        user.username = updated_data.get('username', user.username)
+        user.ra = updated_data.get('ra',user.ra)
+        user.birthdate = updated_data.get('birthdate', user.birthdate)
         user.email = updated_data.get('email', user.email)
+        user.password = updated_data.get('password', user.password)
+
         db.session.commit()
         return user
 
