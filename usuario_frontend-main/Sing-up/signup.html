@@ -25,11 +25,15 @@
                 <label for="password"></label>
                 <input type="password" id="password" placeholder="Senha"/>
 
-                <button onclick="createAccount()">Criar Conta</button>
+                <form class="register-form" onsubmit="createAccount()">
+                    <!-- campos do formulário aqui -->
+                    <button type="submit">Criar Conta</button>
+                    <!-- Restante do formulário -->
+                </form>
                 <p class="message">Já registrado? <a href="../Login/login.html">Login</a></p>
             </form>
         </div>
     </div>
-    <script src="signup-script.js"></script>
+
 </body>
 </html>

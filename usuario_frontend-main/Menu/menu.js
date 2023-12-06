@@ -1,3 +1,5 @@
+const url_base = "http://127.0.0.1:5000";
+
 document.addEventListener("DOMContentLoaded", function () {
     const enviarBtn = document.getElementById("enviar");
     const enviarUrlBtn = document.getElementById("enviarUrl");
