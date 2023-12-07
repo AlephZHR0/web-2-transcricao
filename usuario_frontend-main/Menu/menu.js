@@ -14,16 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const url = prompt("Digite a URL:");
         if (url) {
             enviarMensagem(`<a href="${url}" target="_blank">${url}</a>`);
-        }
-    });
-
-    function enviarMensagem(mensagem = "") {
-        if (mensagem.trim() !== "") {
-            const novaMensagem = document.createElement("p");
-            novaMensagem.innerHTML = mensagem;
-            chatContainer.appendChild(novaMensagem);
-            chatContainer.scrollTop = chatContainer.scrollHeight;
-            textoInput.value = "";
-        }
-    }
+        }   
+    });    
 });
